@@ -1,0 +1,38 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+<div class="row banner menu">
+   <div class="col-md-10 padding-20 padding-bottom">
+      <h1>{{ category.name }}
+         Games
+      </h1>
+   </div>
+</div>
+<div class="row padding-top ">
+   <div class="col-md-1"></div>
+   <div class="col-md-11 padding-none">
+   </div>
+   <div class="col-md-7"></div>
+</div>
+{% if items !=[] %}	
+<div class="row">
+<div class="col-md-1"></div>
+<div class="col-md-10">
+   {% for i in items %}
+   <div class="menu-item">
+      <img class="img-responsive" src="{{ i.picture }}">
+      <h3>Name: {{i.name}}</h3>
+      <p>Descriptiption: {{i.description}}</p>
+      <p>Platform: {{i.platform}}</p>
+      <p> Developer: {{i.developer}}</p>
+      <p> Publisher: {{i.publisher}}</p>
+      <p> Producer: {{i.producer}}</p>
+      <p> Director: {{i.director}}</p>
+      <p>
+         </a>
+      </p>
+   </div>
+   {% endfor %}
+</div>
+{% endif %}
+{% endblock %}

@@ -18,11 +18,11 @@
          </div>
          <div class="form-group">
             <label for="description">Description:</label>
-            <input type ="text" maxlength="50" class="form-control" name="desription" required>
+            <input type ="text" maxlength="50" class="form-control" name="description" required>
          </div>
          <div class="form-group">
             <label for="platform">Platform:</label>
-            <textarea class="form-control" maxlength="300" rows="3" name="file_link" value="{{item.platform}}"></textarea>
+            <textarea class="form-control" maxlength="300" rows="3" name="platform" value="{{item.platform}}"></textarea>
          </div>
          <div class="form-group">
             <label for="picture">Add image link:</label>
@@ -46,9 +46,7 @@
          </div>
          <button type="submit" class="btn btn-default" id="submit" type="submit">
          <span class="glyphicon glyphicon-ok" aria-hidden="true"></span>Save</button>
-         <a href = '{{url_for('showCategories')}}'>
-         <button class="btn btn-default delete">
-         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Cancel</button>
+         <a href = '{{url_for('showCategories')}}'> Cancel </a>
          </a>
       </form>
    </div>

@@ -22,7 +22,6 @@ class Category(Base):
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
 
-
     @property
     def serialize(self):
         """Return object data in easily serializeable format"""
@@ -59,7 +58,7 @@ class Game(Base):
             'picture': self.picture,
             'platform': self.platform,
             'developer': self.developer,
-            'publisher':self.publisher,
+            'publisher': self.publisher,
             'producer': self.producer,
             'director': self.director,
         }
@@ -69,3 +68,4 @@ engine = create_engine('sqlite:///Games.db')
 
 
 Base.metadata.create_all(engine)
+

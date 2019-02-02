@@ -25,7 +25,7 @@ app = Flask(__name__)
 
 CLIENT_ID = json.loads(
     open('client_secrets.json', 'r').read())['web']['client_id']
-APPLICATION_NAME = 'Games Menu Web client'
+APPLICATION_NAME = 'Games Menu Web client 2'
 
 # Connect to Database and create database session
 
@@ -162,7 +162,7 @@ def gconnect():
 
 
 # User Helper Functions
-# function of creating  new user 
+# function of creating  new user
 def createUser(login_session):
     newUser = User(name=login_session['username'],
                    email=login_session['email'],
